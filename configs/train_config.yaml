@@ -1,0 +1,37 @@
+
+# YOLOv8 Training Configuration for Medical X-Ray Detection
+
+# Dataset
+data: data/processed/yolo_dataset/data.yaml  # Path to dataset configuration
+
+# Model parameters
+model: yolov8n.pt     # Base model to start from
+epochs: 100           # Number of epochs
+patience: 20          # Early stopping patience
+batch: 16             # Batch size
+imgsz: 1024           # Input resolution
+device:               # Auto-select device
+
+# Hyperparameters 
+hyp: configs/medical_hyper.yaml     # Custom hyperparameters with weighted loss
+
+# Augmentation
+augment: True         # Use augmentation
+aug_config: configs/medical_augmentation.yaml  # Medical-specific augmentation config
+
+# Validation
+val: True             # Validate during training
+save: True            # Save results
+save_period: 10       # Save checkpoint every 10 epochs
+
+# Performance optimization
+workers: 8            # Number of worker threads
+optimizer: AdamW      # Optimizer
+lr0: 0.001            # Initial learning rate
+lrf: 0.01             # Final learning rate ratio (lr0 * lrf)
+momentum: 0.937       # SGD momentum/Adam beta1
+weight_decay: 0.0005  # Optimizer weight decay
+warmup_epochs: 3      # Warmup epochs
+warmup_momentum: 0.8  # Warmup initial momentum
+warmup_bias_lr: 0.1   # Warmup initial bias lr
+    

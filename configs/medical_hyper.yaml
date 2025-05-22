@@ -1,0 +1,10 @@
+
+# YOLOv8 Hyperparameters for Medical X-Ray Detection
+task: detect
+# Loss weights (cls, box, dfl)
+cls_loss_weight: 0.5  # class loss gain
+box_loss_weight: 7.5  # box loss gain
+dfl_loss_weight: 1.5  # dfl loss gain
+# Class weights for balanced training
+class_weights: [0.610, 3.939, 2.020, 0.855, 2.161, 2.007, 1.414, 0.845, 1.096, 0.852, 0.825, 0.499, 3.496, 0.499]  # class weights
+    

@@ -1,0 +1,25 @@
+
+# YOLOv8 Augmentation Configuration for Medical X-Rays
+
+# Mosaic and mixup
+mosaic: 0.0  # Disabled as it may create unrealistic combinations
+mixup: 0.0   # Disabled for the same reason
+
+# HSV color augmentation
+hsv_h: 0.0   # No hue for grayscale
+hsv_s: 0.0   # No saturation for grayscale
+hsv_v: 0.1   # Small brightness adjustments (contrast)
+
+# Geometric transformations
+degrees: 5.0          # Small rotation to simulate patient positioning
+translate: 0.1        # Small translation
+scale: 0.2            # Scale to simulate different distances
+shear: 2.0            # Small shear to simulate projection variations
+perspective: 0.0      # No perspective as X-rays are parallel projections
+flip_ud: 0.0          # No vertical flip (preserves anatomical orientation)
+flip_lr: 0.1          # Occasional horizontal flip (anatomically plausible)
+
+# Other augmentations
+copy_paste: 0.0       # Disabled as it creates unrealistic combinations
+auto_augment: none    # No auto augment
+    
