@@ -134,4 +134,4 @@ Training on a larger portion of the VinBigData dataset is the most critical next
 
 Developed by Gustavo Gomes
 
-- [LinkedIn](https://www.linkedin.com/in/gustavo-gomes-581975333/)
+- [LinkedIn](https://www.linkedin.com/in/gustavo-alves-gomes/)
